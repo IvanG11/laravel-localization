@@ -1037,7 +1037,7 @@ class LaravelLocalization
      */
     protected function getForcedLocale()
     {
-        return Env::get(static::ENV_ROUTE_KEY, function () {
+        return env(static::ENV_ROUTE_KEY, function () {
             $value = getenv(static::ENV_ROUTE_KEY);
 
             if ($value !== false) {
